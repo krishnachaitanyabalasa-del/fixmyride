@@ -1,0 +1,9 @@
+.admin-home-container {
+  padding: 30px 40px;
+}
+
+@media (max-width: 768px) {
+  .admin-home-container {
+    padding: 20px;
+  }
+}

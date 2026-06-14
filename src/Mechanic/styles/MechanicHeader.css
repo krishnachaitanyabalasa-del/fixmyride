@@ -1,0 +1,397 @@
+/* ===========================
+   HEADER
+=========================== */
+
+.mechanic-dashboard-header {
+  width: 100%;
+  height: 80px;
+
+  background: white;
+  border-bottom: 2px solid #fed7aa;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 40px;
+  box-sizing: border-box;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+}
+
+/* ===========================
+   LEFT SECTION
+=========================== */
+
+.mechanic-left-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* ===========================
+   LOGO
+=========================== */
+
+.mechanic-dashboard-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.mechanic-dashboard-logo img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.mechanic-dashboard-brand {
+  display: flex;
+  align-items: center;
+}
+
+.mechanic-brand-fix {
+  font-size: 32px;
+  font-weight: 800;
+  color: #2563eb;
+}
+
+.mechanic-brand-my {
+  font-size: 32px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.mechanic-brand-ride {
+  font-size: 32px;
+  font-weight: 800;
+  color: #f97316;
+}
+
+/* ===========================
+   NAVIGATION
+=========================== */
+
+.mechanic-dashboard-center {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mechanic-nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 12px 18px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: transparent;
+
+  color: #64748b;
+
+  cursor: pointer;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.mechanic-nav-btn:hover {
+  background: #fff7ed;
+  color: #f97316;
+}
+
+.mechanic-active {
+  background: linear-gradient(
+    135deg,
+    #f97316,
+    #fb923c
+  );
+
+  color: white;
+  font-weight: 700;
+
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.25);
+}
+
+/* ===========================
+   RIGHT SECTION
+=========================== */
+
+.mechanic-dashboard-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* ===========================
+   NOTIFICATION
+=========================== */
+
+.mechanic-notification-btn {
+  position: relative;
+
+  width: 42px;
+  height: 42px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #f8fafc;
+
+  color: #475569;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  font-size: 18px;
+
+  transition: all 0.3s ease;
+}
+
+.mechanic-notification-btn:hover {
+  background: #fff7ed;
+  color: #f97316;
+}
+
+.mechanic-notification-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+
+  width: 18px;
+  height: 18px;
+
+  border-radius: 50%;
+
+  background: #ef4444;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* ===========================
+   USER INFO
+=========================== */
+
+.mechanic-info-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  cursor: pointer;
+}
+
+.mechanic-avatar-icon {
+  font-size: 38px;
+  color: #f97316;
+}
+
+.mechanic-info-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.mechanic-name-text {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.mechanic-role-text {
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* ===========================
+   LOGOUT
+=========================== */
+
+.mechanic-logout-btn {
+  width: 42px;
+  height: 42px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #fff7ed;
+  color: #ea580c;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  font-size: 16px;
+
+  transition: all 0.3s ease;
+}
+
+.mechanic-logout-btn:hover {
+  background: #ffedd5;
+  transform: translateY(-2px);
+}
+
+/* ===========================
+   MOBILE MENU BUTTON
+=========================== */
+
+.mechanic-menu-btn {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #fff7ed;
+  color: #f97316;
+
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  font-size: 24px;
+
+  transition: all 0.3s ease;
+
+  flex-shrink: 0;
+}
+
+.mechanic-menu-btn:hover {
+  background: #ffedd5;
+  transform: translateY(-2px);
+}
+
+/* ===========================
+   DESKTOP
+=========================== */
+
+@media (min-width: 993px) {
+
+  .mechanic-menu-btn {
+    display: none;
+  }
+
+  .mechanic-dashboard-center {
+    display: flex !important;
+  }
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width: 992px) {
+
+  .mechanic-dashboard-header {
+    padding: 0 16px;
+  }
+
+  .mechanic-menu-btn {
+    display: flex;
+  }
+
+  .mechanic-dashboard-center {
+    position: absolute;
+
+    top: 80px;
+    left: 0;
+
+    width: 100%;
+
+    background: white;
+
+    display: none;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    padding: 12px;
+
+    box-sizing: border-box;
+
+    border-top: 1px solid #fed7aa;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+
+    z-index: 999;
+  }
+
+  .mechanic-dashboard-center.mobile-open {
+    display: flex;
+  }
+
+  .mechanic-nav-btn {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .mechanic-info-content {
+    display: none;
+  }
+
+}
+
+/* ===========================
+   SMALL MOBILE
+=========================== */
+
+@media (max-width: 576px) {
+
+  .mechanic-dashboard-header {
+    height: 70px;
+    padding: 0 12px;
+  }
+
+  .mechanic-dashboard-logo img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .mechanic-brand-fix,
+  .mechanic-brand-my,
+  .mechanic-brand-ride {
+    font-size: 24px;
+  }
+
+  .mechanic-avatar-icon {
+    font-size: 32px;
+  }
+
+  .mechanic-dashboard-right {
+    gap: 10px;
+  }
+
+  .mechanic-notification-btn,
+  .mechanic-logout-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .mechanic-dashboard-center {
+    top: 70px;
+  }
+}

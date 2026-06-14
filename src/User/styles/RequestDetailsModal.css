@@ -1,0 +1,436 @@
+/* ==========================================
+   MODAL OVERLAY
+========================================== */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  background: rgba(15, 23, 42, 0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 9999;
+
+  backdrop-filter: blur(4px);
+}
+
+
+/* ==========================================
+   MODAL BOX
+========================================== */
+
+.modal-box {
+  background: white;
+
+  width: 90%;
+  max-width: 1100px;
+
+  max-height: 90vh;
+  overflow-y: auto;
+
+  border-radius: 24px;
+
+  padding: 35px;
+
+  position: relative;
+
+  box-shadow:
+    0 20px 60px rgba(15, 23, 42, 0.2);
+}
+
+
+/* ==========================================
+   CLOSE BUTTON
+========================================== */
+
+.close-btn {
+  position: absolute;
+
+  top: 20px;
+  right: 20px;
+
+  width: 42px;
+  height: 42px;
+
+  border: none;
+
+  background: #f1f5f9;
+
+  border-radius: 50%;
+
+  font-size: 18px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.close-btn:hover {
+  background: #e2e8f0;
+}
+
+
+/* ==========================================
+   TITLE
+========================================== */
+
+.modal-box h2 {
+  font-size: 34px;
+  font-weight: 800;
+
+  color: #0f172a;
+
+  margin-bottom: 30px;
+}
+
+
+/* ==========================================
+   DETAILS GRID
+========================================== */
+
+.details-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 22px;
+}
+
+
+/* ==========================================
+   DETAIL CARD
+========================================== */
+
+.detail-card {
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 18px;
+
+  padding: 24px;
+
+  transition: 0.3s;
+}
+
+.detail-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(15, 23, 42, 0.06);
+}
+
+
+/* ==========================================
+   CARD TITLE
+========================================== */
+
+.detail-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+
+  color: #2563eb;
+
+  margin-bottom: 18px;
+}
+
+
+/* ==========================================
+   DETAILS TEXT
+========================================== */
+
+.detail-card p {
+  margin-bottom: 12px;
+
+  color: #334155;
+
+  line-height: 1.7;
+
+  font-size: 15px;
+}
+
+.detail-card strong {
+  color: #0f172a;
+}
+
+
+/* ==========================================
+   STATUS COLORS
+========================================== */
+
+.status-pending {
+  color: #f59e0b;
+  font-weight: 700;
+}
+
+.status-progress {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.status-completed {
+  color: #16a34a;
+  font-weight: 700;
+}
+
+.status-cancelled {
+  color: #dc2626;
+  font-weight: 700;
+}
+
+
+/* ==========================================
+   ACTION BUTTONS
+========================================== */
+
+.modal-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 15px;
+
+  margin-top: 35px;
+}
+
+
+/* CLOSE BUTTON */
+
+.close-modal-btn {
+  border: none;
+
+  background: #2563eb;
+
+  color: white;
+
+  padding: 14px 26px;
+
+  border-radius: 12px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.close-modal-btn:hover {
+  background: #1d4ed8;
+}
+
+
+/* CANCEL BUTTON */
+
+.cancel-btn {
+  border: none;
+
+  background: #ef4444;
+
+  color: white;
+
+  padding: 14px 26px;
+
+  border-radius: 12px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.cancel-btn:hover {
+  background: #dc2626;
+}
+
+
+/* ==========================================
+   TIMELINE SECTION
+========================================== */
+
+.timeline {
+  margin-top: 20px;
+}
+
+.timeline-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 18px;
+}
+
+.timeline-dot {
+  width: 18px;
+  height: 18px;
+
+  border-radius: 50%;
+}
+
+.timeline-dot.completed {
+  background: #22c55e;
+}
+
+.timeline-dot.active {
+  background: #3b82f6;
+}
+
+.timeline-dot.pending {
+  background: #cbd5e1;
+}
+
+.timeline-text {
+  color: hsl(215, 25%, 27%);
+}
+
+.timeline-card {
+  grid-column: span 2;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 10px;
+}
+
+.timeline-item {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  padding-bottom: 25px;
+}
+
+.timeline-item:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+
+  left: 8px;
+  top: 22px;
+
+  width: 2px;
+  height: calc(100% - 5px);
+
+  background: #dbe2ea;
+}
+
+.timeline-dot {
+  width: 18px;
+  height: 18px;
+
+  border-radius: 50%;
+
+  flex-shrink: 0;
+
+  z-index: 2;
+}
+
+.timeline-dot.completed {
+  background: #22c55e;
+}
+
+.timeline-dot.active {
+  background: #2563eb;
+
+  box-shadow: 0 0 0 6px rgba(37,99,235,0.15);
+}
+
+.timeline-dot.pending {
+  background: #cbd5e1;
+}
+
+.timeline-title {
+  font-size: 16px;
+  font-weight: 600;
+
+  color: #0f172a;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .modal-box {
+    width: 95%;
+    padding: 25px;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-box h2 {
+    font-size: 28px;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+  }
+
+  .close-modal-btn,
+  .cancel-btn {
+    width: 100%;
+  }
+}
+
+.message-box {
+
+  margin: 20px 0;
+
+  padding: 16px 20px;
+
+  border-radius: 14px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  animation: slideDown .3s ease;
+}
+
+.message-box.success {
+
+  background: #ecfdf3;
+
+  color: #15803d;
+
+  border: 1px solid #86efac;
+}
+
+.message-box.error {
+
+  background: #fef2f2;
+
+  color: #dc2626;
+
+  border: 1px solid #fca5a5;
+}
+
+@keyframes slideDown {
+
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

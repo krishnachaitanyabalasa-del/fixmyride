@@ -1,0 +1,585 @@
+.mechanics-page {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+/* ===========================
+   PAGE HEADER
+=========================== */
+
+.mechanics-header-section {
+  margin-bottom: 25px;
+}
+
+.mechanics-header-section h1 {
+  margin: 0;
+
+  font-size: 2rem;
+  font-weight: 700;
+
+  color: #111827;
+}
+
+.mechanics-header-section p {
+  margin-top: 8px;
+
+  color: #6b7280;
+
+  font-size: 0.95rem;
+}
+
+/* ===========================
+   SEARCH CARD
+=========================== */
+
+.mechanics-search-card {
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+
+  padding: 20px;
+
+  margin-bottom: 25px;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.mechanics-search-wrapper {
+  position: relative;
+}
+
+.mechanics-search-icon {
+  position: absolute;
+
+  left: 18px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: #94a3b8;
+}
+
+.mechanics-search-wrapper input {
+  width: 100%;
+
+  padding: 14px 18px 14px 50px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+
+  font-size: 15px;
+
+  outline: none;
+
+  box-sizing: border-box;
+}
+
+.mechanics-search-wrapper input:focus {
+  border-color: #f97316;
+
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+}
+
+
+/* ===========================
+   TABLE CARD
+=========================== */
+
+
+
+.mechanics-table-card {
+  background: white;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.mechanics-table-header {
+  padding: 22px 25px;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  background: #fffaf5;
+}
+
+.mechanics-table-header h3 {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.mechanics-table-responsive {
+  overflow-x: auto;
+}
+
+.mechanics-table-card table {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+.mechanics-table-card th {
+  background: #f8fafc;
+
+  padding: 18px;
+
+  text-align: left;
+
+  color: #475569;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.mechanics-table-card td {
+  padding: 18px;
+
+  border-top: 1px solid #f1f5f9;
+
+  color: #111827;
+
+  font-size: 14px;
+}
+
+.mechanics-table-card tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* ===========================
+   ACTION BUTTONS
+=========================== */
+
+.mechanic-action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mechanic-view-btn {
+  border: none;
+
+  background: #1e293b;
+  color: white;
+
+  padding: 10px 14px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.mechanic-view-btn:hover {
+  background: #0f172a;
+}
+
+.mechanic-approve-btn {
+  border: none;
+
+  background: #16a34a;
+  color: white;
+
+  padding: 10px 14px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.mechanic-approve-btn:hover {
+  background: #15803d;
+}
+
+.mechanic-reject-btn {
+  border: none;
+
+  background: #dc2626;
+  color: white;
+
+  padding: 10px 14px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.mechanic-reject-btn:hover {
+  background: #b91c1c;
+}
+
+/* ===========================
+   EMPTY STATE
+=========================== */
+
+.no-mechanics {
+  text-align: center;
+
+  padding: 40px !important;
+
+  color: #64748b;
+
+  font-size: 15px;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 992px) {
+  .mechanics-page {
+    padding: 20px;
+  }
+
+  .mechanics-header-section h1 {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mechanics-page {
+    padding: 15px;
+  }
+
+  .mechanics-table-card th,
+  .mechanics-table-card td {
+    padding: 12px;
+  }
+
+  .mechanic-action-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .mechanic-view-btn,
+  .mechanic-approve-btn,
+  .mechanic-reject-btn {
+    justify-content: center;
+  }
+}
+
+/* ===========================
+   MECHANIC DETAILS MODAL
+=========================== */
+
+.mechanic-modal-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.55);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 9999;
+
+  backdrop-filter: blur(4px);
+}
+
+.mechanic-modal-container {
+  width: 900px;
+  max-width: 95%;
+
+  background: #ffffff;
+
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  animation: mechanicModalShow 0.25s ease;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes mechanicModalShow {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mechanic-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 22px 30px;
+
+  border-bottom: 1px solid #f1f5f9;
+
+  background: #fffaf5;
+}
+
+.mechanic-modal-header h2 {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.mechanic-modal-close {
+  border: none;
+  background: transparent;
+
+  font-size: 32px;
+
+  cursor: pointer;
+
+  color: #64748b;
+}
+
+.mechanic-modal-close:hover {
+  color: #ea580c;
+}
+
+.mechanic-profile-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  padding: 30px;
+}
+
+.mechanic-avatar-large {
+  width: 85px;
+  height: 85px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #f97316,
+    #ea580c
+  );
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.mechanic-profile-section h3 {
+  margin: 0;
+
+  color: #111827;
+  font-size: 1.3rem;
+}
+
+.mechanic-profile-section p {
+  margin-top: 8px;
+
+  color: #64748b;
+}
+
+.mechanic-details-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+
+  padding: 0 30px 30px;
+}
+
+.mechanic-detail-box {
+  background: #fffaf5;
+
+  border: 1px solid #fed7aa;
+
+  border-radius: 16px;
+
+  padding: 18px;
+}
+
+.mechanic-detail-box label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #9a3412;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.mechanic-detail-box span {
+  color: #111827;
+
+  font-weight: 600;
+}
+
+.mechanic-location-btn {
+  border: none;
+
+  background: linear-gradient(
+    135deg,
+    #f97316,
+    #ea580c
+  );
+
+  color: white;
+
+  padding: 10px 16px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.mechanic-location-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 20px rgba(249, 115, 22, 0.3);
+}
+
+/* ===========================
+   TABLE ACTION BUTTONS
+=========================== */
+
+.mechanic-action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mechanic-view-btn {
+  border: none;
+
+  background: #1e293b;
+  color: white;
+
+  padding: 10px 14px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  font-weight: 600;
+}
+
+.mechanic-view-btn:hover {
+  background: #0f172a;
+}
+
+.mechanic-approve-btn {
+  border: none;
+
+  background: #16a34a;
+  color: white;
+
+  padding: 10px 14px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  font-weight: 600;
+}
+
+.mechanic-approve-btn:hover {
+  background: #15803d;
+}
+
+.mechanic-reject-btn {
+  border: none;
+
+  background: #dc2626;
+  color: white;
+
+  padding: 10px 14px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  font-weight: 600;
+}
+
+.mechanic-reject-btn:hover {
+  background: #b91c1c;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 768px) {
+  .mechanic-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mechanic-action-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .mechanic-view-btn,
+  .mechanic-approve-btn,
+  .mechanic-reject-btn {
+    justify-content: center;
+  }
+
+  .mechanic-profile-section {
+    flex-direction: column;
+    text-align: center;
+  }
+}

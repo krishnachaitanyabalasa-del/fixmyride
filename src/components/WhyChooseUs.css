@@ -1,0 +1,113 @@
+.wcu {
+  padding: 80px 0;
+  background: var(--white);
+}
+
+.wcu__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.wcu__header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.wcu__title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--gray-900);
+}
+
+.wcu__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.wcu__col {
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.wcu__col--blue   { background: var(--blue-light); }
+.wcu__col--orange { background: var(--orange-lt); }
+.wcu__col--dark   { background: var(--gray-50); }
+
+.wcu__col-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.wcu__col-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.wcu__col-icon--blue   { background: var(--blue);   color: var(--white); }
+.wcu__col-icon--orange { background: var(--orange); color: var(--white); }
+.wcu__col-icon--dark   { background: var(--gray-900); color: var(--white); }
+
+.wcu__col-title {
+  font-family: var(--font-head);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.wcu__col-title--blue   { color: var(--blue); }
+.wcu__col-title--orange { color: var(--orange); }
+.wcu__col-title--dark   { color: var(--gray-900); }
+
+.wcu__features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.wcu__feat {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-700);
+}
+
+.wcu__feat--blue   svg { color: var(--blue); }
+.wcu__feat--orange svg { color: var(--orange); }
+.wcu__feat--dark   svg { color: var(--gray-900); }
+
+.wcu__visual {
+  margin-top: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.wcu__phone-mockup {
+  display: flex;
+  align-items: flex-end;
+}
+
+.wcu__mechanic-visual,
+.wcu__chart-visual {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+@media (max-width: 860px) {
+  .wcu__grid { grid-template-columns: 1fr; }
+}

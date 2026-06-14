@@ -1,0 +1,202 @@
+/* ==========================================
+   REQUESTS SECTION
+========================================== */
+
+.requests-section {
+  padding: 40px 30px;
+  background: #f8f8f8;
+}
+
+.requests-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.requests-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.view-all-btn {
+  border: none;
+  background: transparent;
+  color: #ff6b00;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.view-all-btn:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================
+   REQUESTS GRID
+========================================== */
+
+.requests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 24px;
+}
+
+/* ==========================================
+   REQUEST CARD
+========================================== */
+
+.request-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 24px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  border: 1px solid #ececec;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+.request-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.request-icon {
+  width: 70px;
+  height: 70px;
+  min-width: 70px;
+  border-radius: 16px;
+  background: #fff3eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+}
+
+.request-content {
+  flex: 1;
+}
+
+.request-content h3 {
+  margin: 0 0 12px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.vehicle-number,
+.location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+.distance {
+  margin: 12px 0 18px;
+  color: #ff6b00;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+/* ==========================================
+   ACCEPT BUTTON
+========================================== */
+
+.accept-btn {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 12px;
+  border-radius: 10px;
+  background: linear-gradient(
+    135deg,
+    #ff7b00,
+    #ff5500
+  );
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.accept-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+/* ==========================================
+   LOADING STATE
+========================================== */
+
+.loading-text {
+  text-align: center;
+  padding: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #555;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 992px) {
+  .requests-section {
+    padding: 30px 20px;
+  }
+
+  .requests-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .request-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .vehicle-number,
+  .location {
+    justify-content: center;
+  }
+
+  .request-content {
+    width: 100%;
+  }
+}
+
+.vehicle-info,
+.location-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #4b5563;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.icon {
+  font-size: 18px;
+  margin-right: 6px;
+  color: #ff6b00;
+}
+.no-requests {
+  width: 100%;
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ff7a00;
+  border: 2px dashed #ff7a00;
+  background: #fff8f1;
+}

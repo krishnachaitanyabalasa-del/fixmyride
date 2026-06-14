@@ -1,0 +1,266 @@
+/* ===========================
+   MECHANIC PROFILE PAGE
+=========================== */
+
+.mechProfileX-container {
+  min-height: 100vh;
+  padding: 40px 8%;
+  background: #fffaf5;
+}
+
+/* ===========================
+   LOADING
+=========================== */
+
+.mechProfileX-loading {
+  text-align: center;
+  margin-top: 100px;
+  color: #ff7a00;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+/* ===========================
+   HERO SECTION
+=========================== */
+
+.mechProfileX-hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.mechProfileX-hero h1 {
+  font-size: 42px;
+  color: #ff7a00;
+  margin-bottom: 10px;
+}
+
+.mechProfileX-hero p {
+  font-size: 18px;
+  color: #666;
+}
+
+/* ===========================
+   PROFILE CARD
+=========================== */
+
+.mechProfileX-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 35px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 35px;
+
+  box-shadow: 0 8px 30px rgba(255, 122, 0, 0.12);
+}
+
+.mechProfileX-left {
+  flex: 1;
+  text-align: center;
+}
+
+.mechProfileX-avatar {
+  font-size: 120px;
+  color: #ff7a00;
+  margin-bottom: 15px;
+}
+
+.mechProfileX-left h2 {
+  font-size: 28px;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.mechProfileX-roleBadge {
+  display: inline-block;
+  padding: 8px 18px;
+  background: #fff3e6;
+  color: #ff7a00;
+  border-radius: 30px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.mechProfileX-statusBadge {
+  display: block;
+  width: fit-content;
+  margin: 15px auto 0;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.mechProfileX-online {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.mechProfileX-offline {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* ===========================
+   RIGHT SIDE INFO
+=========================== */
+
+.mechProfileX-right {
+  flex: 2;
+}
+
+.mechProfileX-infoItem {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+
+  padding: 16px;
+  margin-bottom: 15px;
+
+  background: #fff8f1;
+  border-radius: 16px;
+  border-left: 5px solid #ff7a00;
+}
+
+.mechProfileX-infoItem svg {
+  color: #ff7a00;
+  font-size: 22px;
+  margin-top: 4px;
+}
+
+.mechProfileX-infoItem label {
+  display: block;
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.mechProfileX-infoItem span {
+  color: #222;
+  font-weight: 600;
+}
+
+/* ===========================
+   GRID
+=========================== */
+
+.mechProfileX-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* ===========================
+   SECTIONS
+=========================== */
+
+.mechProfileX-section {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+
+  box-shadow: 0 6px 20px rgba(255, 122, 0, 0.1);
+
+  border-top: 4px solid #ff7a00;
+}
+
+.mechProfileX-section h3 {
+  color: #ff7a00;
+  margin-bottom: 18px;
+  font-size: 20px;
+}
+
+.mechProfileX-section p {
+  margin-bottom: 14px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.mechProfileX-section strong {
+  color: #222;
+}
+
+.mechProfileX-section svg {
+  color: #ff7a00;
+  margin-right: 6px;
+}
+
+/* ===========================
+   MAP BUTTON
+=========================== */
+
+.mechProfileX-mapBtn {
+  display: inline-block;
+  margin-top: 15px;
+
+  background: #ff7a00;
+  color: white;
+  text-decoration: none;
+
+  padding: 12px 18px;
+  border-radius: 10px;
+
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.mechProfileX-mapBtn:hover {
+  background: #e96d00;
+  transform: translateY(-2px);
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffb347;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff3e6;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 992px) {
+  .mechProfileX-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mechProfileX-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .mechProfileX-container {
+    padding: 25px 5%;
+  }
+
+  .mechProfileX-hero h1 {
+    font-size: 32px;
+  }
+
+  .mechProfileX-avatar {
+    font-size: 90px;
+  }
+
+  .mechProfileX-card {
+    padding: 25px;
+  }
+
+  .mechProfileX-section {
+    padding: 20px;
+  }
+}

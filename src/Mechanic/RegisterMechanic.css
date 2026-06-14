@@ -1,0 +1,493 @@
+.mechanic-register-page {
+  min-height: 100vh;
+  display: flex;
+  background: #f8fafc;
+}
+
+/* ===========================
+   LEFT SIDE
+=========================== */
+
+.mechanic-register-left {
+  width: 48%;
+  min-height: 100vh;
+
+  background: linear-gradient(
+    135deg,
+    #ff7b00 0%,
+    #ff5e00 100%
+  );
+
+  padding: 90px 40px 40px;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.mechanic-register-left::before {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,.08);
+
+  top: -140px;
+  right: -140px;
+}
+
+.mechanic-register-left::after {
+  content: "";
+
+  position: absolute;
+
+  width: 280px;
+  height: 280px;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,.08);
+
+  bottom: -120px;
+  left: -120px;
+}
+
+/* ===========================
+   BRAND
+=========================== */
+
+.mechanic-brand {
+  position: absolute;
+
+  top: 25px;
+  left: 25px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  cursor: pointer;
+  z-index: 10;
+}
+
+.mechanic-brand img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+
+.mechanic-brand-text {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.mechanic-brand-text .fix {
+  color: #2563eb;
+}
+
+.mechanic-brand-text .my {
+  color: white;
+}
+
+.mechanic-brand-text .ride {
+  color: #facc15;
+}
+
+/* ===========================
+   LEFT CONTENT
+=========================== */
+
+.mechanic-left-content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 520px;
+}
+
+.mechanic-image,
+.hero-icon {
+  width: 100%;
+  max-width: 280px;
+
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.mechanic-left-content h2 {
+  font-size: 44px;
+  line-height: 1.1;
+
+  color: white;
+  font-weight: 800;
+
+  margin-bottom: 14px;
+}
+
+.mechanic-left-content > p {
+  color: rgba(255,255,255,.95);
+
+  font-size: 18px;
+  line-height: 1.7;
+
+  margin-bottom: 24px;
+}
+
+/* ===========================
+   FEATURES
+=========================== */
+
+.mechanic-features {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.mechanic-feature {
+  display: flex;
+  gap: 14px;
+
+  padding: 16px;
+
+  border-radius: 16px;
+
+  background: rgba(255,255,255,.95);
+
+  box-shadow:
+    0 4px 12px rgba(15,23,42,.08);
+}
+
+.mechanic-feature span,
+.feature-svg {
+  min-width: 42px;
+  min-height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: rgba(255,123,0,.08);
+
+  font-size: 22px;
+}
+
+.mechanic-feature strong {
+  display: block;
+
+  color: #0f172a;
+  font-size: 16px;
+
+  margin-bottom: 4px;
+}
+
+.mechanic-feature p {
+  margin: 0;
+
+  color: #64748b;
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+/* ===========================
+   RIGHT SIDE
+=========================== */
+
+.mechanic-register-right {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px;
+}
+
+.mechanic-register-card {
+  width: 100%;
+  max-width: 620px;
+
+  background: white;
+
+  border-radius: 28px;
+
+  padding: 42px;
+
+  box-shadow:
+    0 20px 50px rgba(15,23,42,.08);
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.mechanic-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 18px;
+
+  border-radius: 999px;
+
+  background: #fff4e6;
+  color: #ea580c;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  margin-bottom: 24px;
+}
+
+.mechanic-register-card h1 {
+  font-size: 42px;
+  line-height: 1.1;
+
+  color: #0f172a;
+
+  margin-bottom: 10px;
+}
+
+.mechanic-register-card .sub {
+  color: #64748b;
+
+  font-size: 17px;
+  line-height: 1.7;
+
+  margin-bottom: 28px;
+}
+
+/* ===========================
+   FORM
+=========================== */
+
+.mechanic-register-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mechanic-register-card label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  color: #334155;
+}
+
+.mechanic-register-card input,
+.mechanic-register-card select {
+  width: 100%;
+
+  padding: 15px 16px;
+
+  border-radius: 14px;
+
+  border: 1px solid #cbd5e1;
+
+  font-size: 16px;
+
+  transition: .3s;
+}
+
+.mechanic-register-card input:focus,
+.mechanic-register-card select:focus {
+  outline: none;
+
+  border-color: #ff7b00;
+
+  box-shadow:
+    0 0 0 4px rgba(255,123,0,.15);
+}
+
+/* ===========================
+   PASSWORD
+=========================== */
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+
+  top: 50%;
+  right: 14px;
+
+  transform: translateY(-50%);
+
+  border: none;
+  background: transparent;
+
+  cursor: pointer;
+
+  color: #64748b;
+  font-size: 18px;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.location-btn,
+.mechanic-register-btn {
+  width: 100%;
+
+  border: none;
+
+  padding: 16px;
+
+  border-radius: 14px;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: .3s;
+}
+
+.location-btn {
+  background: #fff4e6;
+  color: #ea580c;
+}
+
+.location-btn:hover {
+  background: #ffe7c2;
+}
+
+.mechanic-register-btn {
+  background: linear-gradient(
+    135deg,
+    #ff7b00,
+    #ff5e00
+  );
+
+  color: white;
+}
+
+.mechanic-register-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(255,123,0,.35);
+}
+
+/* ===========================
+   ERROR / SUCCESS
+=========================== */
+
+.error-box {
+  background: #fee2e2;
+
+  color: #b91c1c;
+
+  padding: 12px;
+
+  border-radius: 10px;
+
+  margin-bottom: 16px;
+}
+
+.success-box {
+  background: #dcfce7;
+
+  color: #166534;
+
+  padding: 12px;
+
+  border-radius: 10px;
+
+  margin-bottom: 16px;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.mechanic-footer {
+  text-align: center;
+
+  margin-top: 20px;
+
+  color: #64748b;
+
+  font-size: 15px;
+}
+
+.mechanic-footer a {
+  color: #ea580c;
+
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.mechanic-footer a:hover {
+  text-decoration: underline;
+}
+
+.back-link {
+  width: 100%;
+
+  margin-top: 14px;
+
+  border: none;
+  background: transparent;
+
+  cursor: pointer;
+
+  color: #64748b;
+
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width: 900px) {
+
+  .mechanic-register-page {
+    flex-direction: column;
+  }
+
+  .mechanic-register-left {
+    width: 100%;
+    padding: 90px 25px 30px;
+  }
+
+  .mechanic-register-right {
+    padding: 20px;
+  }
+
+  .mechanic-image,
+  .hero-icon {
+    max-width: 220px;
+  }
+
+  .mechanic-left-content h2 {
+    font-size: 34px;
+  }
+
+  .mechanic-register-card {
+    padding: 28px;
+  }
+
+  .mechanic-register-card h1 {
+    font-size: 32px;
+  }
+}

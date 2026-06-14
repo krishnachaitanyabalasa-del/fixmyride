@@ -1,0 +1,204 @@
+.changeStatusModal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 9999;
+  padding: 20px;
+}
+
+.changeStatusModal-box {
+  width: 100%;
+  max-width: 500px;
+
+  background: #ffffff;
+
+  border-radius: 24px;
+
+  padding: 30px;
+
+  position: relative;
+
+  box-shadow: 0 10px 40px rgba(255, 122, 0, 0.15);
+
+  animation: changeStatusModalFadeIn 0.25s ease;
+}
+
+@keyframes changeStatusModalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.changeStatusModal-box h2 {
+  color: #ff7a00;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+/* Close Button */
+
+.changeStatusModal-closeBtn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #fff3e6;
+
+  color: #ff7a00;
+
+  cursor: pointer;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  transition: all 0.3s ease;
+}
+
+.changeStatusModal-closeBtn:hover {
+  background: #ffe5cc;
+  transform: rotate(90deg);
+}
+
+/* Fields */
+
+.changeStatusModal-field {
+  margin-bottom: 20px;
+}
+
+.changeStatusModal-field label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #444;
+}
+
+.changeStatusModal-field select,
+.changeStatusModal-field input {
+  width: 100%;
+
+  padding: 12px 14px;
+
+  border: 2px solid #ffe0c2;
+
+  border-radius: 12px;
+
+  background: #fffaf5;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition: 0.3s;
+}
+
+.changeStatusModal-field select:focus,
+.changeStatusModal-field input:focus {
+  border-color: #ff7a00;
+  background: #ffffff;
+}
+
+.changeStatusModal-field input::placeholder {
+  color: #999;
+}
+
+/* Actions */
+
+.changeStatusModal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+
+  margin-top: 30px;
+}
+
+.changeStatusModal-updateBtn {
+  border: none;
+
+  background: #ff7a00;
+
+  color: white;
+
+  padding: 12px 22px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.changeStatusModal-updateBtn:hover:not(:disabled) {
+  background: #e96d00;
+  transform: translateY(-2px);
+}
+
+.changeStatusModal-updateBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.changeStatusModal-cancelBtn {
+  border: 1px solid #ffcf99;
+
+  background: #fff3e6;
+
+  color: #ff7a00;
+
+  padding: 12px 22px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.changeStatusModal-cancelBtn:hover {
+  background: #ffe5cc;
+  transform: translateY(-2px);
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .changeStatusModal-box {
+    padding: 24px;
+  }
+
+  .changeStatusModal-actions {
+    flex-direction: column;
+  }
+
+  .changeStatusModal-updateBtn,
+  .changeStatusModal-cancelBtn {
+    width: 100%;
+  }
+}

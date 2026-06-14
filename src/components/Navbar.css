@@ -1,0 +1,247 @@
+/* ==================================
+   LANDING HEADER
+================================== */
+
+.landing-header {
+  width: 100%;
+  height: 85px;
+
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 40px;
+
+  box-sizing: border-box;
+
+  border-bottom: 1px solid #e2e8f0;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* ==================================
+   LEFT SECTION
+================================== */
+
+.landing-left-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.landing-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  cursor: pointer;
+}
+
+.landing-logo img {
+  width: 58px;
+  height: 58px;
+
+  object-fit: contain;
+}
+
+.landing-brand {
+  display: flex;
+  align-items: center;
+
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.landing-brand-fix {
+  color: #2563eb;
+}
+
+.landing-brand-my {
+  color: #111827;
+}
+
+.landing-brand-ride {
+  color: #f97316;
+}
+
+/* ==================================
+   CENTER NAVIGATION
+================================== */
+
+.landing-center-nav {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.landing-nav-btn {
+  background: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  color: #475569;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.landing-nav-btn:hover {
+  color: #2563eb;
+}
+
+/* ==================================
+   RIGHT SECTION
+================================== */
+
+.landing-right-section {
+  display: flex;
+  align-items: center;
+}
+
+.landing-login-btn {
+  background: #2563eb;
+  color: white;
+
+  border: none;
+
+  padding: 12px 28px;
+
+  border-radius: 999px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.landing-login-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* ==================================
+   HAMBURGER
+================================== */
+
+.landing-menu-btn {
+  display: none;
+
+  border: none;
+  background: transparent;
+
+  font-size: 28px;
+  cursor: pointer;
+
+  color: #1e293b;
+}
+
+/* ==================================
+   TABLET
+================================== */
+
+@media (max-width: 992px) {
+
+  .landing-header {
+    padding: 0 20px;
+  }
+
+  .landing-center-nav {
+    gap: 20px;
+  }
+
+  .landing-brand {
+    font-size: 1.8rem;
+  }
+}
+
+/* ==================================
+   MOBILE
+================================== */
+
+@media (max-width: 768px) {
+
+  .landing-menu-btn {
+    display: block;
+  }
+
+  .landing-center-nav {
+    display: none;
+
+    position: absolute;
+    top: 85px;
+    left: 0;
+
+    width: 100%;
+
+    background: white;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+    padding: 25px 0;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  }
+
+  .landing-center-nav.mobile-open {
+    display: flex;
+  }
+
+  .landing-nav-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .landing-login-btn {
+    padding: 10px 22px;
+  }
+
+  .landing-brand {
+    font-size: 1.6rem;
+  }
+
+  .landing-logo img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* ==================================
+   SMALL MOBILE
+================================== */
+
+@media (max-width: 480px) {
+
+  .landing-header {
+    height: 75px;
+    padding: 0 15px;
+  }
+
+  .landing-brand {
+    font-size: 1.4rem;
+  }
+
+  .landing-logo img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .landing-login-btn {
+    padding: 8px 18px;
+    font-size: 14px;
+  }
+
+  .landing-center-nav {
+    top: 75px;
+  }
+}

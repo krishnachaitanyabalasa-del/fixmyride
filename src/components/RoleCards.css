@@ -1,0 +1,152 @@
+.roles {
+  padding: 80px 0;
+  background: var(--white);
+}
+
+.roles__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.roles__header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.roles__title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 10px;
+}
+
+.roles__subtitle {
+  font-size: 15px;
+  color: var(--gray-500);
+}
+
+.roles__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ─── Role Card Base ─── */
+.role-card {
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--gray-200);
+  padding: 36px 28px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  background: var(--white);
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+}
+
+.role-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ─── Icon wrap ─── */
+.role-card__icon-wrap {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+/* ─── Blue (User) ─── */
+.role-card--blue {
+  border-color: var(--blue);
+}
+.role-card--blue .role-card__icon-wrap {
+  background: var(--blue-light);
+  color: var(--blue);
+}
+.role-card--blue .role-card__title { color: var(--blue); }
+.role-card--blue .login-button {
+  background: var(--blue);
+}
+.role-card--blue .login-button:hover {
+  background: var(--blue-dark);
+}
+
+/* ─── Orange (Mechanic) ─── */
+.role-card--orange {
+  border-color: var(--orange);
+}
+.role-card--orange .role-card__icon-wrap {
+  background: var(--orange-lt);
+  color: var(--orange);
+}
+.role-card--orange .role-card__title { color: var(--orange); }
+.role-card--orange .login-button {
+  background: var(--orange);
+}
+.role-card--orange .login-button:hover {
+  background: #ea6c0a;
+}
+
+/* ─── Dark (Admin) ─── */
+.role-card--dark {
+  border-color: var(--gray-700);
+}
+.role-card--dark .role-card__icon-wrap {
+  background: var(--gray-50);
+  color: var(--gray-900);
+}
+.role-card--dark .role-card__title { color: var(--gray-900); }
+.role-card--dark .login-button {
+  background: var(--gray-900);
+}
+.role-card--dark .login-button:hover {
+  background: var(--gray-700);
+}
+
+.role-card__title {
+  font-family: var(--font-head);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.role-card__desc {
+  font-size: 14px;
+  color: var(--gray-500);
+  line-height: 1.6;
+  flex: 1;
+}
+
+.login-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-head);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 12px 24px;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  margin-top: 8px;
+}
+
+.login-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+}
+
+@media (max-width: 860px) {
+  .roles__grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+}

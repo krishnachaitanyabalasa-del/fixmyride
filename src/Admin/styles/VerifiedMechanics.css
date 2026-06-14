@@ -1,0 +1,153 @@
+/* ==========================
+   VERIFIED MECHANICS SECTION
+========================== */
+
+.verified-mechanics-section {
+  margin-top: 30px;
+}
+
+.verified-mechanics-section .mechanics-table-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f1f1f1;
+}
+
+.verified-mechanics-section .mechanics-table-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 18px 24px;
+
+  background: linear-gradient(
+    135deg,
+    #ff7a00,
+    #ff9f43
+  );
+
+  color: white;
+}
+
+.verified-mechanics-section .mechanics-table-header h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.verified-mechanics-section .mechanics-table-responsive {
+  overflow-x: auto;
+}
+
+.verified-mechanics-section table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.verified-mechanics-section thead {
+  background: #fff7f0;
+}
+
+.verified-mechanics-section th {
+  padding: 15px;
+  text-align: left;
+  color: #ff7a00;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-bottom: 2px solid #ffe2c2;
+}
+
+.verified-mechanics-section td {
+  padding: 15px;
+  border-bottom: 1px solid #f3f3f3;
+  vertical-align: middle;
+}
+
+.verified-mechanics-section tbody tr {
+  transition: all 0.3s ease;
+}
+
+.verified-mechanics-section tbody tr:hover {
+  background: #fff9f3;
+}
+
+/* ==========================
+   AVATAR
+========================== */
+
+.verified-mechanic-avatar {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: auto;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #ff6b00,
+    #ffb347
+  );
+
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 700;
+
+  border: 2px solid #ffffff;
+
+  box-shadow: 0 4px 12px rgba(255, 122, 0, 0.35);
+}
+
+/* ==========================
+   VIEW BUTTON
+========================== */
+
+.verified-view-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  border: none;
+  border-radius: 8px;
+
+  padding: 9px 16px;
+
+  background: linear-gradient(
+    135deg,
+    #ff7a00,
+    #ff9f43
+  );
+
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.verified-view-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 6px 16px rgba(255, 122, 0, 0.3);
+}
+
+.verified-view-btn svg {
+  font-size: 0.9rem;
+}
+
+/* ==========================
+   EMPTY STATE
+========================== */
+
+.no-mechanics {
+  text-align: center;
+  padding: 30px;
+  color: #888;
+  font-weight: 500;
+}

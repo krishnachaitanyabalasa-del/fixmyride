@@ -1,0 +1,261 @@
+.myJobsModal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 9999;
+  padding: 20px;
+}
+
+.myJobsModal-box {
+  background: #fff;
+  width: 95%;
+  max-width: 1100px;
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  border-radius: 24px;
+  padding: 30px;
+
+  position: relative;
+
+  box-shadow: 0 10px 40px rgba(255, 122, 0, 0.15);
+}
+
+.myJobsModal-box h2 {
+  color: #ff7a00;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 32px;
+}
+
+/* Close Button */
+
+.myJobsModal-closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  border: none;
+  background: #fff3e6;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  color: #ff7a00;
+  font-size: 18px;
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+.myJobsModal-locationBtn {
+  margin-top: 12px;
+  padding: 12px 20px;
+
+  background: linear-gradient(
+    135deg,
+    #f97316,
+    #fb923c
+  );
+
+  color: white;
+  border: none;
+  border-radius: 12px;
+
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.25);
+}
+
+.myJobsModal-locationBtn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(
+    135deg,
+    #ea580c,
+    #f97316
+  );
+  box-shadow: 0 8px 18px rgba(249, 115, 22, 0.35);
+}
+
+.myJobsModal-locationBtn:active {
+  transform: scale(0.98);
+}
+.myJobsModal-closeBtn:hover {
+  background: #ffe5cc;
+  transform: rotate(90deg);
+}
+
+/* Grid */
+
+.myJobsModal-detailsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Cards */
+
+.myJobsModal-detailCard {
+  background: #fff8f1;
+
+  border-left: 5px solid #ff7a00;
+
+  border-radius: 18px;
+
+  padding: 20px;
+
+  box-shadow: 0 4px 12px rgba(255, 122, 0, 0.08);
+}
+
+.myJobsModal-detailCard h3 {
+  color: #ff7a00;
+  margin-bottom: 15px;
+}
+
+.myJobsModal-detailCard p {
+  margin: 10px 0;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* Timeline */
+
+.myJobsModal-timelineCard {
+  grid-column: span 2;
+}
+
+.myJobsModal-timeline {
+  margin-top: 20px;
+}
+
+.myJobsModal-timelineItem {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  margin-bottom: 18px;
+}
+
+.myJobsModal-timelineDot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+.myJobsModal-timelineDot.myJobsModal-completed {
+  background: #22c55e;
+}
+
+.myJobsModal-timelineDot.myJobsModal-active {
+  background: #ff7a00;
+  box-shadow: 0 0 12px rgba(255, 122, 0, 0.4);
+}
+
+.myJobsModal-timelineDot.myJobsModal-pending {
+  background: #d6d6d6;
+}
+
+.myJobsModal-timelineTitle {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Footer Buttons */
+
+.myJobsModal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+
+  margin-top: 30px;
+}
+
+.myJobsModal-cancelBtn {
+  background: #ff7a00;
+  color: white;
+
+  border: none;
+  padding: 12px 22px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.myJobsModal-cancelBtn:hover {
+  background: #e96d00;
+  transform: translateY(-2px);
+}
+
+.myJobsModal-closeModalBtn {
+  background: #fff3e6;
+  color: #ff7a00;
+
+  border: 1px solid #ffcf99;
+
+  padding: 12px 22px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.myJobsModal-closeModalBtn:hover {
+  background: #ffe5cc;
+  transform: translateY(-2px);
+}
+
+/* Scrollbar */
+
+.myJobsModal-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.myJobsModal-box::-webkit-scrollbar-thumb {
+  background: #ffb347;
+  border-radius: 10px;
+}
+
+.myJobsModal-box::-webkit-scrollbar-track {
+  background: #fff3e6;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .myJobsModal-detailsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .myJobsModal-timelineCard {
+    grid-column: span 1;
+  }
+
+  .myJobsModal-actions {
+    flex-direction: column;
+  }
+
+  .myJobsModal-cancelBtn,
+  .myJobsModal-closeModalBtn {
+    width: 100%;
+  }
+}

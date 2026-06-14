@@ -1,0 +1,252 @@
+/* ===========================
+   HOW IT WORKS SECTION
+=========================== */
+
+.how-it-works-section {
+  padding: 90px 40px;
+  background: #ffffff;
+}
+
+.how-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.how-header span {
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.how-header h2 {
+  font-size: 42px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 15px 0;
+}
+
+.how-header p {
+  font-size: 18px;
+  color: #64748b;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.7;
+}
+
+/* ===========================
+   TIMELINE
+=========================== */
+
+.timeline-container {
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.timeline-card {
+  flex: 1;
+  min-width: 300px;
+  max-width: 380px;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 40px 30px;
+  text-align: center;
+  position: relative;
+  transition: all 0.35s ease;
+  box-shadow: 0 10px 35px rgba(15, 23, 42, 0.08);
+  border: 1px solid #e2e8f0;
+}
+
+.timeline-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(37, 99, 235, 0.15);
+}
+
+/* Step Number */
+
+.step-number {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #3b82f6
+  );
+  color: white;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+}
+
+/* Icon */
+
+.step-icon {
+  width: 95px;
+  height: 95px;
+  margin: 30px auto 25px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    rgba(37, 99, 235, 0.1),
+    rgba(59, 130, 246, 0.15)
+  );
+  color: #2563eb;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.timeline-card:hover .step-icon {
+  transform: scale(1.1);
+}
+
+/* Text */
+
+.timeline-card h3 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 15px;
+}
+
+.timeline-card p {
+  color: #64748b;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+/* Arrow */
+
+.timeline-arrow {
+  font-size: 50px;
+  font-weight: bold;
+  color: #2563eb;
+  animation: bounceArrow 2s infinite;
+}
+
+/* Animation */
+
+@keyframes bounceArrow {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* ===========================
+   DESKTOP HORIZONTAL TIMELINE
+=========================== */
+
+@media (min-width: 992px) {
+  .timeline-container {
+    flex-wrap: nowrap;
+  }
+
+  .timeline-arrow {
+    font-size: 42px;
+    transform: rotate(-90deg);
+  }
+
+  .timeline-arrow:hover {
+    transform: rotate(-90deg);
+  }
+}
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media (max-width: 991px) {
+  .how-it-works-section {
+    padding: 70px 25px;
+  }
+
+  .how-header h2 {
+    font-size: 34px;
+  }
+
+  .timeline-card {
+    max-width: 100%;
+  }
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width: 768px) {
+  .how-header h2 {
+    font-size: 30px;
+  }
+
+  .how-header p {
+    font-size: 16px;
+  }
+
+  .timeline-card {
+    padding: 35px 25px;
+  }
+
+  .timeline-card h3 {
+    font-size: 22px;
+  }
+
+  .step-icon {
+    width: 80px;
+    height: 80px;
+    font-size: 34px;
+  }
+
+  .timeline-arrow {
+    font-size: 38px;
+  }
+}
+
+/* ===========================
+   SMALL MOBILE
+=========================== */
+
+@media (max-width: 480px) {
+  .how-it-works-section {
+    padding: 60px 15px;
+  }
+
+  .how-header h2 {
+    font-size: 26px;
+  }
+
+  .timeline-card {
+    min-width: 100%;
+  }
+
+  .timeline-card h3 {
+    font-size: 20px;
+  }
+
+  .timeline-card p {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,356 @@
+.login-page {
+  min-height: 100vh;
+  display: flex;
+}
+
+/* ─── Left Panel ─── */
+.login-page__left {
+  width: 44%;
+  background: var(--blue-light);
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-page__left--orange {
+  background: var(--orange);
+}
+
+.login-page__left::before {
+  content: '';
+  position: absolute;
+  width: 400px; height: 400px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  top: -100px; right: -100px;
+  pointer-events: none;
+}
+
+.login-page__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-bottom: auto;
+  font-family: var(--font-head);
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.login-page__brand img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 50px;
+}
+
+.login-page__illus {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.login-page__illus svg {
+  max-width: 280px;
+  margin-bottom: 8px;
+}
+
+.login-page__illus h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--blue-dark);
+  line-height: 1.25;
+}
+
+.login-page__illus--white h2 { color: var(--white); }
+
+.login-page__illus p {
+  font-size: 14px;
+  color: var(--gray-500);
+  line-height: 1.6;
+  max-width: 280px;
+}
+
+.login-page__illus--white p { color: rgba(255,255,255,0.75); }
+
+/* ─── Right Panel ─── */
+.login-page__right {
+  flex: 1;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 32px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.login-card__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-family: var(--font-head);
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  width: fit-content;
+}
+
+.login-card__badge--blue {
+  background: var(--blue-light);
+  color: var(--blue);
+}
+
+.login-card__badge--orange {
+  background: var(--orange-lt);
+  color: var(--orange);
+}
+
+.login-card__title {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--gray-900);
+  margin-bottom: 6px;
+}
+
+.login-card__sub {
+  font-size: 14px;
+  color: var(--gray-500);
+  margin-bottom: 32px;
+}
+
+/* ─── Form ─── */
+.login-form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+}
+
+.field-group label {
+  font-family: var(--font-head);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-700);
+}
+
+.field-group input {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-family: var(--font-body);
+  color: var(--gray-900);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background: var(--white);
+}
+
+.field-group input:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.12);
+}
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 45px;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.password-toggle:hover {
+  opacity: 0.8;
+}
+
+.login-page--mechanic .field-group input:focus {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(249,115,22,0.12);
+}
+
+.forgot-link {
+  font-size: 12px;
+  color: var(--blue);
+  text-decoration: none;
+  text-align: right;
+  display: block;
+  margin-top: 4px;
+}
+
+.forgot-link:hover { text-decoration: underline; }
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: var(--font-head);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--white);
+  cursor: pointer;
+  margin-top: 4px;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+
+.submit-btn--blue { background: var(--blue); }
+.submit-btn--blue:hover {
+  background: var(--blue-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(37,99,235,0.3);
+}
+
+.submit-btn--orange { background: var(--orange); }
+.submit-btn--orange:hover {
+  background: #ea6c0a;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(249,115,22,0.3);
+}
+
+.login-card__footer {
+  font-size: 13px;
+  color: var(--gray-500);
+  text-align: center;
+  margin-top: 20px;
+}
+
+.login-card__footer a {
+  color: var(--blue);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.login-card__footer a:hover { text-decoration: underline; }
+
+.back-link {
+  background: none;
+  border: none;
+  color: var(--gray-500);
+  font-size: 13px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 12px;
+  font-family: var(--font-body);
+  transition: color 0.2s;
+}
+
+.back-link:hover { color: var(--blue); }
+
+@media (max-width: 768px) {
+  .login-page { flex-direction: column; }
+  .login-page__left { width: 100%; padding: 28px 24px; }
+  .login-page__illus { display: none; }
+  .login-page__right { padding: 32px 20px; }
+}
+
+.error-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ef4444;
+  background: #fef2f2;
+  color: #b91c1c;
+  font-weight: 500;
+}
+
+.error-icon {
+  color: #dc2626;
+  font-size: 18px;
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* ADMIN THEME */
+
+.login-page--admin .login-page__left {
+  background: linear-gradient(
+    135deg,
+    #111827 0%,
+    #1f2937 100%
+  );
+}
+
+.login-page--admin .login-page__brand {
+  color: white;
+}
+
+.login-page--admin .brand-fix {
+  color: #ffffff;
+}
+
+.login-page--admin .brand-my {
+  color: #d1d5db !important;
+}
+
+.login-page--admin .brand-ride {
+  color: #fbbf24;
+}
+
+.login-page--admin .login-page__illus h2 {
+  color: #ffffff !important;
+}
+
+.login-page--admin .login-page__illus p {
+  color: rgba(255,255,255,.85) !important;
+}
+
+.login-page--admin .login-card__badge {
+  background: #111827;
+  color: white;
+}
+
+.login-page--admin .submit-btn {
+  background: linear-gradient(
+    135deg,
+    #111827,
+    #374151
+  );
+  color: white;
+}
+
+.login-page--admin .submit-btn:hover {
+  box-shadow:
+    0 10px 25px rgba(17,24,39,.35);
+}

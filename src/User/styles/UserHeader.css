@@ -1,0 +1,391 @@
+/* ===========================
+   HEADER
+=========================== */
+
+.user-dashboard-header {
+  width: 100%;
+  height: 80px;
+
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 40px;
+  box-sizing: border-box;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+}
+
+/* ===========================
+   LEFT SECTION
+=========================== */
+
+.user-left-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* ===========================
+   LOGO
+=========================== */
+
+.user-dashboard-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.user-dashboard-logo img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.user-dashboard-brand {
+  display: flex;
+  align-items: center;
+}
+
+.user-brand-fix {
+  font-size: 32px;
+  font-weight: 800;
+  color: #2563eb;
+}
+
+.user-brand-my {
+  font-size: 32px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.user-brand-ride {
+  font-size: 32px;
+  font-weight: 800;
+  color: #f97316;
+}
+
+/* ===========================
+   NAVIGATION
+=========================== */
+
+.user-dashboard-center {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 12px 18px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: transparent;
+
+  color: #64748b;
+
+  cursor: pointer;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.user-nav-btn:hover {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.user-active {
+  background: #2563eb;
+  color: white;
+  font-weight: 700;
+}
+
+/* ===========================
+   RIGHT SECTION
+=========================== */
+
+.user-dashboard-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* ===========================
+   NOTIFICATION
+=========================== */
+
+.user-notification-btn {
+  position: relative;
+
+  width: 42px;
+  height: 42px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #f8fafc;
+
+  color: #475569;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  font-size: 18px;
+
+  transition: all 0.3s ease;
+}
+
+.user-notification-btn:hover {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.user-notification-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+
+  width: 18px;
+  height: 18px;
+
+  border-radius: 50%;
+
+  background: #ef4444;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* ===========================
+   USER INFO
+=========================== */
+
+.user-info-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  cursor: pointer;
+}
+
+.user-avatar-icon {
+  font-size: 38px;
+  color: #2563eb;
+}
+
+.user-info-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name-text {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.user-role-text {
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* ===========================
+   LOGOUT
+=========================== */
+
+.user-logout-btn {
+  width: 42px;
+  height: 42px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #fff7ed;
+  color: #ea580c;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  font-size: 16px;
+
+  transition: all 0.3s ease;
+}
+
+.user-logout-btn:hover {
+  background: #ffedd5;
+  transform: translateY(-2px);
+}
+
+/* ===========================
+   MOBILE MENU BUTTON
+=========================== */
+
+.user-menu-btn {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #f8fafc;
+
+  color: #2563eb;
+
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  font-size: 24px;
+
+  transition: all 0.3s ease;
+
+  flex-shrink: 0;
+}
+
+.user-menu-btn:hover {
+  background: #eff6ff;
+  transform: translateY(-2px);
+}
+
+/* ===========================
+   DESKTOP
+=========================== */
+
+@media (min-width: 993px) {
+
+  .user-menu-btn {
+    display: none;
+  }
+
+  .user-dashboard-center {
+    display: flex !important;
+  }
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width: 992px) {
+
+  .user-dashboard-header {
+    padding: 0 16px;
+  }
+
+  .user-menu-btn {
+    display: flex;
+  }
+
+  .user-dashboard-center {
+
+    position: absolute;
+
+    top: 80px;
+    left: 0;
+
+    width: 100%;
+
+    background: white;
+
+    display: none;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    padding: 12px;
+
+    box-sizing: border-box;
+
+    border-top: 1px solid #e2e8f0;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  }
+
+  .user-dashboard-center.mobile-open {
+    display: flex;
+  }
+
+  .user-nav-btn {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .user-info-content {
+    display: none;
+  }
+
+}
+
+/* ===========================
+   SMALL MOBILE
+=========================== */
+
+@media (max-width: 576px) {
+
+  .user-dashboard-header {
+    height: 70px;
+    padding: 0 12px;
+  }
+
+  .user-dashboard-logo img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .user-brand-fix,
+  .user-brand-my,
+  .user-brand-ride {
+    font-size: 24px;
+  }
+
+  .user-avatar-icon {
+    font-size: 32px;
+  }
+
+  .user-dashboard-right {
+    gap: 10px;
+  }
+
+  .user-notification-btn,
+  .user-logout-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .user-dashboard-center {
+    top: 70px;
+  }
+
+}
